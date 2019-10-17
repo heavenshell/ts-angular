@@ -1,6 +1,6 @@
 {
   "name": "ts-angular",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +8,9 @@
     "test": "jest",
     "test:karma": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "http-server": "http-server ./dist/ts-angular --silent -p 4200",
+    "e2e": "testcafe 'chrome --no-sandobox' tests --app='yarn start' --app-init-delay=30000",
+    "e2e:http-server": "testcafe 'chrome --no-sandobox' tests --app='yarn http-server'"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +36,7 @@
     "@types/jest": "24.0.18",
     "@types/node": "8.10.54",
     "codelyzer": "5.1.2",
+    "http-server": "0.11.1",
     "jasmine-core": "3.5.0",
     "jasmine-spec-reporter": "4.2.1",
     "jest": "24.9.0",
@@ -45,6 +48,8 @@
     "karma-jasmine": "2.0.1",
     "karma-jasmine-html-reporter": "1.4.2",
     "protractor": "5.4.2",
+    "testcafe": "1.5.0",
+    "testcafe-angular-selectors": "0.3.2",
     "ts-node": "8.4.1",
     "tslint": "5.20.0",
     "typescript": "3.6.4"
