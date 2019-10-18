@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "http-server": "http-server ./dist/ts-angular --silent -p 4200",
     "e2e": "testcafe 'chrome --no-sandobox' tests --app='yarn start' --app-init-delay=30000",
-    "e2e:http-server": "testcafe 'chrome --no-sandobox' tests --app='yarn http-server'"
+    "e2e:http-server": "testcafe 'chrome:headless --no-sandobox' tests --app='yarn http-server'"
   },
   "private": true,
   "dependencies": {
