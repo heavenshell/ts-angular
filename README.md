@@ -4,10 +4,11 @@
 
 My angular suburi(practice).
 
-| Library        | Description       |
-|:---------------|:------------------|
-| Angular        | Framework         |
-| Jest           | Testing framework |
+| Library        | Description           |
+|:---------------|:----------------------|
+| Angular        | Framework             |
+| Jest           | Testing framework     |
+| TestCafe       | E2E Testing framework |
 
 ## TODO
 
@@ -16,7 +17,7 @@ My angular suburi(practice).
 - [ ] Eslint
 - [ ] Prettier
 - [ ] Markdownlint
-- [ ] TestCafe
+- [X] TestCafe
 
 ## Development server
 
@@ -46,8 +47,17 @@ yarn test:karma
 
 ## Running end-to-end tests
 
+Run TestCafe with start ng serve automatically
+
 ```console
 yarn e2e
+```
+
+Run TestCafe with static build
+
+```console
+yarn build
+yarn e2e:http-server
 ```
 
 ## License
