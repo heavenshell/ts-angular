@@ -67,7 +67,8 @@
         "tsConfig": "<rootDir>/tsconfig.test.json",
         "stringifyContentPathRegex": "\\.html$",
         "astTransformers": [
-          "jest-preset-angular/InlineHtmlStripStylesTransformer"
+          "jest-preset-angular/build/InlineFilesTransformer",
+          "jest-preset-angular/build/StripStylesTransformer"
         ]
       }
     }
