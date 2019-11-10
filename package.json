@@ -37,6 +37,7 @@
     "@types/node": "12.12.7",
     "codelyzer": "5.2.0",
     "http-server": "0.11.1",
+    "husky": "3.0.9",
     "jasmine-core": "3.5.0",
     "jasmine-spec-reporter": "4.2.1",
     "jest": "24.9.0",
@@ -47,11 +48,15 @@
     "karma-coverage-istanbul-reporter": "2.1.0",
     "karma-jasmine": "2.0.1",
     "karma-jasmine-html-reporter": "1.4.2",
+    "lint-staged": "9.4.2",
+    "prettier": "1.19.1",
     "protractor": "5.4.2",
     "testcafe": "1.6.1",
     "testcafe-angular-selectors": "0.3.2",
     "ts-node": "8.4.1",
     "tslint": "5.20.1",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-plugin-prettier": "2.0.1",
     "typescript": "~3.5.3"
   },
   "jest": {
@@ -71,6 +76,11 @@
           "jest-preset-angular/build/StripStylesTransformer"
         ]
       }
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   }
 }
