@@ -13,11 +13,11 @@ My angular suburi(practice).
 ## TODO
 
 - [x] Jest
-- [ ] Storybook
+- [x] Storybook
 - [ ] Eslint
-- [X] Prettier
-- [X] Markdownlint
-- [X] TestCafe
+- [x] Prettier
+- [x] Markdownlint
+- [x] TestCafe
 
 ## Development server
 
@@ -58,6 +58,12 @@ Run TestCafe with static build
 ```console
 yarn build
 yarn e2e:http-server
+```
+
+Run Storybook
+
+```console
+yarn storybook
 ```
 
 ## License
