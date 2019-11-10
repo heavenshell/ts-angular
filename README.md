@@ -15,8 +15,8 @@ My angular suburi(practice).
 - [x] Jest
 - [ ] Storybook
 - [ ] Eslint
-- [ ] Prettier
-- [ ] Markdownlint
+- [X] Prettier
+- [X] Markdownlint
 - [X] TestCafe
 
 ## Development server
