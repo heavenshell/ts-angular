@@ -6,6 +6,7 @@
     "automerge": false
   },
   "pinDigests": false,
+  "rangeStrategy": "replace",
   "packageRules": [
     {
       "packagePatterns": [
