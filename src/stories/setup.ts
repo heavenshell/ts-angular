@@ -10,6 +10,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { RouterModule, RouterLink } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
+import { ClrIconModule } from '@clr/angular';
+
 import { action } from '@storybook/addon-actions';
 
 @Component({
@@ -39,6 +41,7 @@ export const imports = [
   RouterTestingModule.withRoutes([
     { path: '**', component: RouterLinkStubComponent },
   ]),
+  ClrIconModule,
 ];
 
 export const declarations = [RouterLinkStubComponent, RouterLinkStubDirective];
