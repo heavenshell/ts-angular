@@ -10,6 +10,8 @@ import { FooterComponent } from './components/organisms/footer/footer.component'
 import { LayoutComponent } from './components/templates/layout/layout.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { CategoriesComponent } from './components/pages/categories/categories.component';
+import { GithubComponent } from './components/atoms/github/github.component';
+import { TwitterComponent } from './components/atoms/twitter/twitter.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { CategoriesComponent } from './components/pages/categories/categories.co
     LayoutComponent,
     HomeComponent,
     CategoriesComponent,
+    GithubComponent,
+    TwitterComponent,
   ],
   imports: [
     BrowserModule,

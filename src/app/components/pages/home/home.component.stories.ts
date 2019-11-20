@@ -1,4 +1,5 @@
 import { declarations, imports } from '../../../../stories/setup';
+import { declarations as layoutDeclarations } from '../../__fixtures__/layout';
 import { HomeComponent } from './home.component';
 
 const story = {
@@ -8,7 +9,7 @@ const story = {
 export const component = () => ({
   moduleMetadata: {
     imports,
-    declarations,
+    declarations: [...declarations, layoutDeclarations],
     providers: [],
   },
   component: HomeComponent,

@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ClarityModule } from '@clr/angular';
 
 import { CategoriesComponent } from './categories.component';
+import { declarations } from '../../__fixtures__/layout';
 
 describe('CategoriesComponent', () => {
   let component: CategoriesComponent;
@@ -8,7 +10,8 @@ describe('CategoriesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CategoriesComponent],
+      imports: [ClarityModule],
+      declarations: [...declarations, CategoriesComponent],
     }).compileComponents();
   }));
 
@@ -20,5 +23,10 @@ describe('CategoriesComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render', () => {
+    const element: HTMLElement = fixture.debugElement.nativeElement;
+    expect(element.querySelector('p').textContent).toBe('categories works!');
   });
 });

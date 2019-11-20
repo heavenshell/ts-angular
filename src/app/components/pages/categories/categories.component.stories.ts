@@ -1,4 +1,5 @@
 import { declarations, imports } from '../../../../stories/setup';
+import { declarations as layoutDeclarations } from '../../__fixtures__/layout';
 import { HeaderComponent } from '../../organisms/header/header.component';
 import { FooterComponent } from '../../organisms/footer/footer.component';
 import { LayoutComponent } from '../../templates/layout/layout.component';
@@ -11,12 +12,7 @@ const story = {
 export const component = () => ({
   moduleMetadata: {
     imports,
-    declarations: [
-      ...declarations,
-      HeaderComponent,
-      FooterComponent,
-      LayoutComponent,
-    ],
+    declarations: [...declarations, ...layoutDeclarations],
     providers: [],
   },
   component: CategoriesComponent,
