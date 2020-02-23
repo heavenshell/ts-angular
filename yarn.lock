@@ -1699,22 +1699,22 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@clr/angular@2.3.7":
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-2.3.7.tgz#943a00f7f5295e7b4478f129df431dec191d079d"
-  integrity sha512-cjdomYI1xguSn6x54B6SI3N0DccInVnxcVNRbaCT0z7cLZhfsQxq1zj5oVJ1ma1D4XbSxa8hcaai3R/DuXoBKg==
+"@clr/angular@2.3.8":
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-2.3.8.tgz#ac7640f4f7ed40fa0a2f0b7d64789c71fd0b39f7"
+  integrity sha512-YNNVuoXPIy2/fRiIsVW4Qmim/h8GSdj/KZA1WqpYG/R6JJHkKpyrh8ssLtFk6IWMWwyoWc5YC0DJd9JShuXSgQ==
   dependencies:
     tslib "^1.9.0"
 
-"@clr/icons@2.3.7":
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-2.3.7.tgz#9bdfda5c1f3183c34c79ebdec5388f7392502e8c"
-  integrity sha512-f9K48XPffxAz+Sij+HwXl3txAuXHwDrowl+thmHzuVn7PwLd0OIgw3Vj7QkhtOKBlfRLf6/BN/sEluCX4vdDRQ==
+"@clr/icons@2.3.8":
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-2.3.8.tgz#721d5e93de00b5dce46965728d5c98b8c956d757"
+  integrity sha512-4qcwlF42Y36/RJakAID5wnDWbwznL3m1pLkJOs9sON5k11NWOWL1K/EqlxbzXDiLrUI2arcLt549th+EEoP+KQ==
 
-"@clr/ui@2.3.7":
-  version "2.3.7"
-  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-2.3.7.tgz#15c9262a3a3c2a084d22d21cc692382af800ad93"
-  integrity sha512-OwSZh37qkTMm0m2vKsaUJjV3OyMWeW1r7wzgwMgc6s0S4v7fd5AlUMq7vZcYnERmaUQ+FZdDuxD0XqqKa0Cauw==
+"@clr/ui@2.3.8":
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-2.3.8.tgz#638ec03dcbff3260ce411e1b273f3790ace46853"
+  integrity sha512-C7QR1gXSvg5xRdIktjKhUZmOWrTtcCNgzUOYlzfWBoKNpOiojXBN/x3TCqQYr7sYD6GNh4qmr0HTV155/jmCHQ==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
@@ -15064,6 +15064,11 @@ tslib@1.10.0, tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
+
+tslib@1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.0.tgz#f1f3528301621a53220d58373ae510ff747a66bc"
+  integrity sha512-BmndXUtiTn/VDDrJzQE7Mm22Ix3PxgLltW9bSNLoeCY31gnG2OPx0QqJnuc9oMIKioYrz487i6K9o4Pdn0j+Kg==
 
 tslint-config-prettier@1.18.0:
   version "1.18.0"
