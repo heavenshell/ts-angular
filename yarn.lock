@@ -1699,22 +1699,22 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@clr/angular@2.3.9":
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-2.3.9.tgz#6cdd2c81e78a1b41289181affdfb28ae738cdbb8"
-  integrity sha512-QUXPwxaSEWCIscqVQhNoEB2dFbBQnpUkP0R/Yp6Tfmzbw87g74QsWu1ukkW2gcRMyyybSF0mN6eglXMHjUna8g==
+"@clr/angular@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-2.4.0.tgz#e134b5f3b10ea5b60767dde3eb10962017efb929"
+  integrity sha512-udA7vBr9o0wt4zMoqlefK5IiZ/bglba1xszOn2k59iLHiG8X4T4A1yhm59790bNv6htJjWuaEHeUqlQjrop4pg==
   dependencies:
     tslib "^1.9.0"
 
-"@clr/icons@2.3.9":
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-2.3.9.tgz#58fd9e852d85c49f0d894bfd5bf8bf4352f79b6d"
-  integrity sha512-7IrfN6S5S9nr0tAC5UMUPavIRIb/7xIoy7dqauW5tpzgy3Z+l85Q/iVffSL0p+bhGhIWGIH8bdi8K6UxfzU9vA==
+"@clr/icons@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-2.4.0.tgz#fe2b7633a34f9e90fdbf03451e05728440a4fa29"
+  integrity sha512-121MqE2S5lmGPdkjOqQKIuKFVheQwEAEx/VvAaXaaPUCIpoFg/0kOrg1hfx0rWllzsTiEiUMYTG7fqvekyCSAw==
 
-"@clr/ui@2.3.9":
-  version "2.3.9"
-  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-2.3.9.tgz#107aa3f6a4602f685f97581987c58a309b7e9d24"
-  integrity sha512-kupbLCdMhcBHOm9V45n9JwPjKubtPCYGiQorybCTSxkIvtB1Ex+D2gmMuPBhqQNpUgBKgiUOqYKhwgvxrjSqBg==
+"@clr/ui@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-2.4.0.tgz#079e8956534d7a2372c207c7c16dabaf59e8e678"
+  integrity sha512-NiGOZiEJM5Z79PzbuVL/zYQD/mswCuS6tv09kpkSecYHI70PzfL8PAoZXmgX9oCDcE/D/R5da69XGg41w3K7aQ==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
@@ -13377,10 +13377,10 @@ rxjs@6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@6.5.4:
-  version "6.5.4"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.4.tgz#e0777fe0d184cec7872df147f303572d414e211c"
-  integrity sha512-naMQXcgEo3csAEGvw/NydRA0fuS2nDZJiw1YUWFKU7aPPAPGZEsD4Iimit96qwCieH6y614MCLYwdkrWx7z/7Q==
+rxjs@6.5.5:
+  version "6.5.5"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
+  integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
   dependencies:
     tslib "^1.9.0"
 
