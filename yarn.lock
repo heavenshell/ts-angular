@@ -1699,22 +1699,22 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@clr/angular@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-2.4.0.tgz#e134b5f3b10ea5b60767dde3eb10962017efb929"
-  integrity sha512-udA7vBr9o0wt4zMoqlefK5IiZ/bglba1xszOn2k59iLHiG8X4T4A1yhm59790bNv6htJjWuaEHeUqlQjrop4pg==
+"@clr/angular@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-2.4.1.tgz#c17619ceb3e18c37920eebf812111ca956e4e7a5"
+  integrity sha512-4obNw+QZTtN/AUmD+qNlv3OV0ho0x5IT8Yw+9EIGnY3jQtIg94VGrb3spLXZx4SVunNKpIB1Yey9O2Lj4t+g4Q==
   dependencies:
     tslib "^1.9.0"
 
-"@clr/icons@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-2.4.0.tgz#fe2b7633a34f9e90fdbf03451e05728440a4fa29"
-  integrity sha512-121MqE2S5lmGPdkjOqQKIuKFVheQwEAEx/VvAaXaaPUCIpoFg/0kOrg1hfx0rWllzsTiEiUMYTG7fqvekyCSAw==
+"@clr/icons@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-2.4.1.tgz#a7fe1040a9e0c31e67feb8e2267fbb75a23a9566"
+  integrity sha512-Ed5z9kOHnW2SdXKpInckca6h8FTULhHeNoNgSfvhItZunlMYHgFNUFT4D3dVWfRIUINE4gMipU+8uLrGG9NqOw==
 
-"@clr/ui@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-2.4.0.tgz#079e8956534d7a2372c207c7c16dabaf59e8e678"
-  integrity sha512-NiGOZiEJM5Z79PzbuVL/zYQD/mswCuS6tv09kpkSecYHI70PzfL8PAoZXmgX9oCDcE/D/R5da69XGg41w3K7aQ==
+"@clr/ui@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-2.4.1.tgz#766216583f3ab896daaf8ef3863bea742fb8d96a"
+  integrity sha512-xMP6VdyMzwbrAGgZTrCek2bJYFff2RWz7Gj2VWNmNZx0wgdtqlQ6Ej3bjQNwZbj0pawHVHs3tbb0IJkXio0U2w==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
