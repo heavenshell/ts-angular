@@ -18,5 +18,8 @@
     "src/app/components/__fixtures__/*.ts",
     "src/environments/environment.prod.ts",
     "src/stories/setup.ts"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": true
+  }
 }
