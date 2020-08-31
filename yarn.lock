@@ -1389,20 +1389,22 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@clr/angular@3.1.6":
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-3.1.6.tgz#a7a6d7236b1e080b66b6012c718bfd72d6ef2734"
-  integrity sha512-NeZNqsjOcgbNFuVay91f4pJuajY+IBiaM2XDCPiEf1tfpbm5qsN4h0EUZdnFddh3V6FLCsCgf6X1F+Iiu7BULQ==
+"@clr/angular@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-4.0.1.tgz#36ab54220e290613c97a53e366ee7af1be8a0496"
+  integrity sha512-rdxjTTOuZoIlkl/rZhhPq+kdc6N3uRHG6PmVMrN9dvM3sV3YdKXNOTti+i+cLy3eAQYVIS6XO3uwDjkslWu7gQ==
+  dependencies:
+    tslib "^2.0.0"
 
-"@clr/icons@3.1.6":
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-3.1.6.tgz#7933d17eef5e4c42b8a3475e3fc64c02c5a9d178"
-  integrity sha512-gT2m7EbiWbA4yFXuwXd4FfetmCGCnSubnJjpy95571rRCooYJjEh2lqQVfEOntpSCXrCEatI625TvILIx1jQLA==
+"@clr/icons@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-4.0.1.tgz#812d6d60c1ea3dcc3c333dfc7933b283cff63860"
+  integrity sha512-62UspNBzBSs/TSAKFSyub7Snv3jHPVuNOxrU50o39u+iMt031stJT3Fc7e7R7Q9lA0pOFQTgfWMcYvd6Id6wJg==
 
-"@clr/ui@3.1.6":
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-3.1.6.tgz#654726cf25a6509f67f317b4af86b7439fe2f33d"
-  integrity sha512-7PZSWAiG/y64h3bPSDlvWRMHtKVh+cfDvw4ntN6d0kdgxqSFeiYICE3/uRk/V9WUGUnNjeZaDV9FlcTSx6FRxg==
+"@clr/ui@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-4.0.1.tgz#7414ace73f43324605e5a9e11fdd5961af05bada"
+  integrity sha512-TL5+XUF6JZfErcqsgW4zrV7IsH7vUmMJBEf/AX0awrg54ivobT4frkeNQlejE1hS1zbT4Xt0HBA/owufPiefzg==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
