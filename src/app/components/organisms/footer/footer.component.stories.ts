@@ -1,5 +1,5 @@
 import { ClarityModule } from '@clr/angular';
-import { number } from '@storybook/addon-knobs/angular';
+import { number } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 
 import { declarations } from '../../__fixtures__/layout';
