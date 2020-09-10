@@ -1,5 +1,5 @@
 import { configure, addDecorator, addParameters } from '@storybook/angular';
-import { withKnobs } from '@storybook/addon-knobs/angular';
+import { withKnobs } from '@storybook/addon-knobs';
 
 addDecorator(withKnobs);
 addParameters({
