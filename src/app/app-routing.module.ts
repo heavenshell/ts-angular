@@ -7,6 +7,13 @@ import { CategoriesComponent } from './components/pages/categories/categories.co
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'categories', component: CategoriesComponent },
+  {
+    path: 'launches',
+    loadChildren: () =>
+      import('./components/pages/launches/launches.module').then(
+        (mod) => mod.LaunchesModule
+      ),
+  },
 ];
 
 @NgModule({

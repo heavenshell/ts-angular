@@ -26,6 +26,6 @@ describe('HeaderComponent', () => {
 
   it('should render', () => {
     const element: HTMLElement = fixture.debugElement.nativeElement;
-    expect(element.querySelector('header a').textContent).toBe('My gear');
+    expect(element.querySelector('header a').textContent).toBe('SpaceX');
   });
 });

@@ -12,7 +12,8 @@
     "e2e": "testcafe 'chrome --no-sandobox' tests --app='yarn start' --app-init-delay=30000",
     "e2e:http-server": "testcafe 'chrome:headless --no-sandobox' tests --app='yarn http-server'",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "codegen": "npx openapi-generator generate -i ./codegen/swagger.json -g typescript-angular -o ./src/apis/spacex -c ./codegen/config.json"
   },
   "private": true,
   "dependencies": {
@@ -27,7 +28,7 @@
     "@clr/angular": "4.0.1",
     "@clr/icons": "4.0.1",
     "@clr/ui": "4.0.1",
-    "@webcomponents/custom-elements": "1.4.2",
+    "@webcomponents/webcomponentsjs": "2.4.4",
     "rxjs": "6.6.3",
     "tslib": "2.0.1",
     "zone.js": "0.11.1"
@@ -38,6 +39,7 @@
     "@angular/compiler-cli": "10.1.1",
     "@angular/language-service": "10.1.1",
     "@babel/core": "7.11.6",
+    "@openapitools/openapi-generator-cli": "1.0.18-4.3.1",
     "@storybook/addon-actions": "6.0.21",
     "@storybook/addon-knobs": "6.0.21",
     "@storybook/addon-links": "6.0.21",

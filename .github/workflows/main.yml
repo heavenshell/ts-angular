@@ -21,6 +21,9 @@ jobs:
     - name: Install dependencies
       run: yarn install
 
+    - name: Generate swagger
+      run: yarn codegen
+
     - name: Lint and test
       run: |
         yarn lint
