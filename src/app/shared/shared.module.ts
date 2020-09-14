@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ClarityModule, ClrIconModule } from '@clr/angular';
+import { ClarityModule } from '@clr/angular';
 
 @NgModule({
   declarations: [],
@@ -12,7 +12,6 @@ import { ClarityModule, ClrIconModule } from '@clr/angular';
     HttpClientModule,
     ReactiveFormsModule,
     ClarityModule,
-    ClrIconModule,
   ],
   exports: [
     CommonModule,
@@ -20,7 +19,6 @@ import { ClarityModule, ClrIconModule } from '@clr/angular';
     FormsModule,
     ReactiveFormsModule,
     ClarityModule,
-    ClrIconModule,
   ],
 })
 export class SharedModule {}

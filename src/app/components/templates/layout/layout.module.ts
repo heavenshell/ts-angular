@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ClarityModule } from '@clr/angular';
 
 import { LayoutComponent } from './layout.component';
 import { GithubComponent } from '../../atoms/github/github.component';
@@ -14,7 +15,7 @@ import { HeaderComponent } from '../../organisms/header/header.component';
     FooterComponent,
     HeaderComponent,
   ],
-  imports: [],
+  imports: [ClarityModule],
   exports: [
     LayoutComponent,
     GithubComponent,
