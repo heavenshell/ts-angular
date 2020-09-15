@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { CategoriesComponent } from './components/pages/categories/categories.component';
 import { LayoutModule } from './components/templates/layout/layout.module';
 import { ApiModule, Configuration } from 'src/apis/spacex';
 import { environment } from 'src/environments/environment';
@@ -18,7 +19,7 @@ const ApiConfigurationFactory = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, CategoriesComponent],
   imports: [
     ApiModule.forRoot(ApiConfigurationFactory),
     BrowserModule,
