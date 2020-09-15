@@ -35,14 +35,14 @@ type QueryParams = {
 })
 export class LaunchListComponent implements OnInit, OnDestroy {
   private onDestroy$ = new EventEmitter();
-  readonly PAGE = 1;
-  readonly SIZE = 10;
+  readonly DEFAULT_PAGE = 1;
+  readonly DEFAULT_SIZE = 10;
   items: Launch[] = [];
   datetimeDescSort = ClrDatagridSortOrder.DESC;
   loading = true;
   total = 200;
-  page = this.PAGE;
-  size = this.SIZE;
+  page = this.DEFAULT_PAGE;
+  size = this.DEFAULT_SIZE;
 
   constructor(
     private cd: ChangeDetectorRef,
@@ -61,9 +61,9 @@ export class LaunchListComponent implements OnInit, OnDestroy {
       )
       .subscribe((params) => {
         const page = Number(params.get('page'));
-        this.page = isNaN(page) ? 1 : page;
+        this.page = isNaN(page) ? this.DEFAULT_PAGE : page;
         const size = Number(params.get('size'));
-        this.size = isNaN(size) ? this.SIZE : size;
+        this.size = isNaN(size) ? this.DEFAULT_SIZE : size;
 
         const order = params.get('order') || 'desc';
         if (order === 'asc') {
