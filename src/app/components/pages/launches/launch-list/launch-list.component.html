@@ -1,0 +1,44 @@
+<app-layout>
+  <clr-datagrid (clrDgRefresh)="refresh($event)" [clrDgLoading]="loading">
+    <clr-dg-column>
+      mission_name
+    </clr-dg-column>
+    <clr-dg-column>
+      rocket_name
+    </clr-dg-column>
+    <clr-dg-column 
+      clrDgSortBy="launch_date_local"
+      [(clrDgSortOrder)]="datetimeDescSort"
+    >
+      launch_date_local
+    </clr-dg-column>
+
+    <clr-dg-row *ngFor="let item of items; let i = index">
+      <clr-dg-cell>
+        {{ item.mission_name }}
+      </clr-dg-cell>
+      <clr-dg-cell>
+        {{ item.rocket.rocket_name }}
+      </clr-dg-cell>
+      <clr-dg-cell>
+        {{ item.launch_date_local }}
+      </clr-dg-cell>
+    </clr-dg-row>
+
+    <clr-dg-footer>
+      <clr-dg-pagination
+        #pagination
+        [clrDgPageSize]="size"
+        [(clrDgPage)]="page"
+        [clrDgTotalItems]="total"
+        >
+          <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">
+            Rows per page
+          </clr-dg-page-size>
+          {{ pagination.firstItem + 1 }} - {{ pagination.lastItem + 1 }} of {{ pagination.totalItems }}
+      </clr-dg-pagination>
+    </clr-dg-footer>
+
+
+  </clr-datagrid>
+</app-layout>

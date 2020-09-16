@@ -1,5 +1,10 @@
 {
   "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "src/apis/**/*"
+    ]
+  },
   "rules": {
     "array-type": false,
     "arrow-parens": false,
