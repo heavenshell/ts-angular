@@ -237,6 +237,14 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/youtube-player@10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/youtube-player/-/youtube-player-10.2.1.tgz#1cd7b3d005f7e2abde9df41dfb9499e7f651c3f2"
+  integrity sha512-JuH2UUavWJOnXiIJngfg9P578ZYIxi1wfs8lwtPTxNVK/ZPSMAuzTDMqjij2TB/jE83fzb5tXkxNo6bE262ZfQ==
+  dependencies:
+    "@types/youtube" "^0.0.38"
+    tslib "^2.0.0"
+
 "@babel/code-frame@7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.8.3.tgz#33e25903d7481181534e12ec0a25f16b6fcf419e"
@@ -2923,6 +2931,11 @@
   integrity sha512-Dk/IDOPtOgubt/IaevIUbTgV7doaKkoorvOyYM2CMwuDyP89bekI7H4xLIwunNYiK9jhCkmc6pUrJk3cj2AB9w==
   dependencies:
     "@types/yargs-parser" "*"
+
+"@types/youtube@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@types/youtube/-/youtube-0.0.38.tgz#04aa5efa61f4d52e9cf682575a9dfed58f31e8c1"
+  integrity sha512-rS0nLlnnZIvOfBNT4957rkKRMHjHxutoVhSEzowocYgNiTMVBmN+Hbkf/L3TeGMMtts9uKZ9gw7O2JLHREVnIw==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"

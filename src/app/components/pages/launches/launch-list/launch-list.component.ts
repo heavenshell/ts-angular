@@ -1,12 +1,6 @@
 import { Location } from '@angular/common';
 import { HttpParams } from '@angular/common/http';
-import {
-  ChangeDetectorRef,
-  Component,
-  EventEmitter,
-  OnInit,
-  OnDestroy,
-} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import {
@@ -33,8 +27,7 @@ type QueryParams = {
   templateUrl: './launch-list.component.html',
   styleUrls: ['./launch-list.component.scss'],
 })
-export class LaunchListComponent implements OnInit, OnDestroy {
-  private onDestroy$ = new EventEmitter();
+export class LaunchListComponent implements OnInit {
   readonly DEFAULT_PAGE = 1;
   readonly DEFAULT_SIZE = 10;
   items: Launch[] = [];
@@ -45,7 +38,6 @@ export class LaunchListComponent implements OnInit, OnDestroy {
   size = this.DEFAULT_SIZE;
 
   constructor(
-    private cd: ChangeDetectorRef,
     private route: ActivatedRoute,
     private router: Router,
     private location: Location,
@@ -53,24 +45,16 @@ export class LaunchListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.route.queryParamMap
-      .pipe(
-        takeUntil(this.onDestroy$),
-        debounceTime(500),
-        distinctUntilChanged()
-      )
-      .subscribe((params) => {
-        const page = Number(params.get('page'));
-        this.page = isNaN(page) ? this.DEFAULT_PAGE : page;
-        const size = Number(params.get('size'));
-        this.size = isNaN(size) ? this.DEFAULT_SIZE : size;
-
-        const order = params.get('order') || 'desc';
-        if (order === 'asc') {
-          this.datetimeDescSort = ClrDatagridSortOrder.ASC;
-        }
-        this.cd.detectChanges();
-      });
+    const page =
+      Number(this.route.snapshot.queryParamMap.get('page')) || this.page;
+    this.page = isNaN(page) ? this.DEFAULT_PAGE : page;
+    const size =
+      Number(this.route.snapshot.queryParamMap.get('size')) || this.size;
+    this.size = isNaN(size) || size === 0 ? this.DEFAULT_SIZE : Number(size);
+    const order = this.route.snapshot.queryParamMap.get('order') || 'desc';
+    if (order === 'asc') {
+      this.datetimeDescSort = ClrDatagridSortOrder.ASC;
+    }
   }
 
   buildQueryString(page, size, order) {
@@ -109,9 +93,5 @@ export class LaunchListComponent implements OnInit, OnDestroy {
         this.loading = false;
       }
     );
-  }
-
-  ngOnDestroy() {
-    this.onDestroy$.complete();
   }
 }

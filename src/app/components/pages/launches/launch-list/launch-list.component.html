@@ -23,6 +23,9 @@
       <clr-dg-cell>
         {{ item.launch_date_local }}
       </clr-dg-cell>
+      <clr-dg-row-detail *clrIfExpanded>
+        <app-launch-datagrid-detail [item]="item"></app-launch-datagrid-detail>
+      </clr-dg-row-detail>
     </clr-dg-row>
 
     <clr-dg-footer>

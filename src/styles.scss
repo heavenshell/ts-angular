@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.margin-none {
+  margin: 0 !important;
+}
+
+.table.table-vertical.table-noborder {
+  td:first-child,
+  th:first-child {
+    background-color: transparent !important;
+  }
+}
