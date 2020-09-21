@@ -1,0 +1,328 @@
+<div [clrLoading]="loading">
+  <clr-dg-row-detail>
+    <ng-container *ngIf="item">
+      <div fxLayout="row" style="width: 100%;">
+        <div fxFlex>
+          <clr-tabs>
+            <clr-tab>
+              <button clrTabLink id="link1">
+                detail
+              </button>
+              <clr-tab-content id="content1" *clrIfActive>
+                <div class="card" *ngIf="item.details">
+                  <div class="card-header">
+                    detail
+                  </div>
+                  <div class="card-block">
+                    <p class="card-text">
+                      {{ item.details }}
+                    </p>
+                  </div>
+                </div>
+                <div class="clr-row">
+                  <div class="clr-col-6">
+                    <div class="card">
+                      <div class="card-header">
+                        mission
+                      </div>
+                      <div class="card-block">
+                        <div class="card-text">
+                          <table class="table table-vertical table-compact table-noborder margin-none">
+                            <tbody>
+                              <tr>
+                                <th>mission id</th>
+                                <td>{{ item.mission_id }}</td>
+                              </tr>
+                              <tr>
+                                <th>mission name</th>
+                                <td>{{ item.mission_name }}</td>
+                              </tr>
+                              <tr>
+                                <th>mission patch</th>
+                                <td><img src="{{ item.links.mission_patch_small}}" /></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clr-col-6">
+                    <div class="card">
+                      <div class="card-header">
+                        launch
+                      </div>
+                      <div class="card-block">
+                        <div class="card-text">
+                          <table class="table table-vertical table-compact table-noborder margin-none">
+                            <tbody>
+                              <tr>
+                                <th>launch id</th>
+                                <td>{{ item.id }}</td>
+                              </tr>
+                              <tr>
+                                <th>launch success</th>
+                                <td [ngSwitch]="item.launch_success">
+                                  <ng-container *ngSwitchCase="true">
+                                    <span class="label label-success">success</span>
+                                  </ng-container>
+                                  <ng-container *ngSwitchCase="false">
+                                    <span class="label label-danger">failure</span>
+                                  </ng-container>
+                                  <ng-container *ngSwitchDefault>
+
+                                  </ng-container>
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>launch date local</th>
+                                <td>{{ item.launch_date_local }}</td>
+                              </tr>
+                              <tr>
+                                <th>launch site id</th>
+                                <td>{{ item.launch_site.site_name }}</td>
+                              </tr>
+                              <tr>
+                                <th>launch site</th>
+                                <td>{{ item.launch_site.site_name_long }}</td>
+                              </tr>
+                              <tr>
+                                <th>static fire date</th>
+                                <td>{{ item.static_fire_date_utc }}</td>
+
+                              </tr>
+                              <tr *ngIf="item.telemetry.flight_club !== null">
+                                <th>telemetry</th>
+                                <td>
+                                  <a href="{{ item.telemetry.flight_club }}" target="_blank" rel="noopener noreferrer">
+                                    <clr-icon shape="pop-out"></clr-icon> flight club
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+            <clr-tab>
+              <button clrTabLink>
+                rockets
+              </button>
+              <clr-tab-content *clrIfActive>
+                <div class="card">
+                  <div class="card-header">
+                    rocket
+                  </div>
+                  <div class="card-block">
+                    <div class="card-text">
+                      <table class="table table-vertical table-compact table-noborder margin-none">
+                        <tbody>
+                          <tr>
+                            <th>rocket id</th>
+                            <td>{{ item.rocket.rocket.id }}</td>
+                          </tr>
+                          <tr>
+                            <th>rocket name</th>
+                            <td>{{ item.rocket.rocket_name }}</td>
+                          </tr>
+                        </tbody>
+                          <tr>
+                            <th>rocket type</th>
+                            <td>{{ item.rocket.rocket_type }}</td>
+                          </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    cores
+                  </div>
+                  <div class="card-block">
+                    <div class="card-text">
+                      <table class="table table-vertical table-compact table-noborder margin-none">
+                        <tbody>
+                          <tr>
+                            <th>id</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.id }}</td>
+                          </tr>
+                          <tr>
+                            <th>block</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.block }}</td>
+                          </tr>
+                          <tr>
+                            <th>asds attempts</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.asds_attempts }}</td>
+                          </tr>
+                          <tr>
+                            <th>asds landings</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.asds_landings }}</td>
+                          </tr>
+                          <tr>
+                            <th>reuse count</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.reuse_count }}</td>
+                          </tr>
+                          <tr>
+                            <th>rtls(return to launch site) attempts</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.rtls_attempts }}</td>
+                          </tr>
+                          <tr>
+                            <th>rtls(return to launch site) landings</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.rtls_landings }}</td>
+                          </tr>
+                          <tr>
+                            <th>status</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.status }}</td>
+                          </tr>
+                          <tr>
+                            <th>water landing</th>
+                            <td>{{ item.rocket.first_stage.cores[0].core.water_landing }}</td>
+                          </tr>
+                          <tr>
+                            <th>flight</th>
+                            <td>{{ item.rocket.first_stage.cores[0].flight }}</td>
+                          </tr>
+                          <tr>
+                            <th>gridfins</th>
+                            <td>{{ item.rocket.first_stage.cores[0].gridfins }}</td>
+                          </tr>
+                          <tr>
+                            <th>land success</th>
+                            <td>{{ item.rocket.first_stage.cores[0].land_success }}</td>
+                          </tr>
+                          <tr>
+                            <th>landing intent</th>
+                            <td>{{ item.rocket.first_stage.cores[0].landing_intent }}</td>
+                          </tr>
+                          <tr>
+                            <th>landing type</th>
+                            <td>{{ item.rocket.first_stage.cores[0].landing_type }}</td>
+                          </tr>
+                          <tr>
+                            <th>landing vehicle</th>
+                            <td>{{ item.rocket.first_stage.cores[0].landing_vehicle}}</td>
+                          </tr>
+                          <tr>
+                            <th>legs</th>
+                            <td>{{ item.rocket.first_stage.cores[0].legs }}</td>
+                          </tr>
+                          <tr>
+                            <th>reused</th>
+                            <td>{{ item.rocket.first_stage.cores[0].reused }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-header">
+                    ships
+                  </div>
+                  <div class="card-block">
+                    <div class="card-text">
+                      <ul class="list-unstyled">
+                        <li *ngFor="let ship of item.ships; let i = index">
+                          <ng-container *ngIf="ship">
+                            {{ ship.id }}
+                          </ng-container>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+            <clr-tab>
+              <button clrTabLink>
+                media
+              </button>
+              <clr-tab-content *clrIfActive>
+                <div class="clr-row">
+                  <div class="clr-col-4" *ngFor="let image of item.links.flickr_images; let i = index">
+                    <div class="card">
+                      <div class="card-block">
+                        <div class="card-img">
+                          <img src="{{ image }}" (click)="showImage(image)" />
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <button
+                          class="btn btn-sm btn-link"
+                          (click)="goToFlickr(image)"
+                        >
+                          <clr-icon shape="pop-out"></clr-icon> Flickr
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+            <clr-tab>
+              <button clrTabLink>
+                video
+              </button>
+              <clr-tab-content *clrIfActive>
+                <div class="card" *ngIf="item.links.video_link">
+                  <div class="card-block">
+                    <div class="card-img">
+                      <youtube-player
+                        videoId="{{ getVideoId(item.links.video_link) }}"
+                      ></youtube-player>
+                    </div>
+                  </div>
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+            <clr-tab>
+              <button clrTabLink>
+                links
+              </button>
+              <clr-tab-content *clrIfActive>
+                <div class="card">
+                  <div class="card-block">
+                    <ul class="list-unstyled">
+                      <li *ngIf="item.links.article_link">
+                        <a href="{{ item.links.article_link }}" target="_blank" rel="noopener noreferrer">
+                          <clr-icon shape="pop-out"></clr-icon> article link
+                        </a>
+                      </li>
+                      <li *ngIf="item.links.wikipedia">
+                        <a href="{{ item.links.wikipedia }}" target="_blank" rel="noopener noreferrer">
+                          <clr-icon shape="pop-out"></clr-icon> wikipedia
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </clr-tab-content>
+            </clr-tab>
+          </clr-tabs>
+        </div>
+      </div>
+    </ng-container>
+  </clr-dg-row-detail>
+</div>
+
+<clr-modal [(clrModalOpen)]="isShowModal" [clrModalStaticBackdrop]="false">
+  <h3 class="modal-title">
+  </h3>
+  <div class="modal-body">
+    <div class="card">
+      <div class="card-img">
+        <img src="{{ image }}" />
+      </div>
+      <div class="card-block">
+        <div class="card-text">
+          <a href="{{ image }}" target="_blank" rel="noopener noreferrer">{{ image }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</clr-modal>

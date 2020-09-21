@@ -128,6 +128,15 @@
   dependencies:
     tslib "^2.0.0"
 
+"@angular/cdk@10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-10.2.1.tgz#7ca0fe7220ca97bdf8e73a40105212749427a88f"
+  integrity sha512-67nPfteerlGPlwBeKt+EEOgEo2zm3+U6FzwhXVqwEeBxCZ7PWelMDiartHC7zZnzIKkcNEO0Uptq7Bzl2gdU0w==
+  dependencies:
+    tslib "^2.0.0"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@10.1.2":
   version "10.1.2"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-10.1.2.tgz#12fa01a4f93fc92151e00c3f26c17656c022c5f1"
@@ -204,6 +213,13 @@
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.0.0.tgz#227dc53e1ac81824f998c6e76000b7efc522641e"
   integrity sha512-6Pxgsrf0qF9iFFqmIcWmjJGkkCaCm6V5QNnxMy2KloO3SDq6QuMVRbN9RtC8Urmo25LP+eZ6ZgYqFYpdD8Hd9w==
 
+"@angular/flex-layout@10.0.0-beta.32":
+  version "10.0.0-beta.32"
+  resolved "https://registry.yarnpkg.com/@angular/flex-layout/-/flex-layout-10.0.0-beta.32.tgz#a797ebd6f3689c71a63e99aa62f2b9cb933f5e2d"
+  integrity sha512-JvuY4dUoy5jyCTIrFiq7n30Znakh1pD3nbg0h0hs2r3t1OiDQb0ZSI1wcumosG/vYHsuJQTuNhbfaIZzA1x8nA==
+  dependencies:
+    tslib "^2.0.0"
+
 "@angular/forms@10.1.2":
   version "10.1.2"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-10.1.2.tgz#3f877468a25a8e54c02b8713906efd64c2823d7d"
@@ -235,6 +251,14 @@
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-10.1.2.tgz#bddfdd4acc88bf1eab359859dc3f832a448489e1"
   integrity sha512-JufAdFyTsB9I9aMD/WNBaI4Fi81SuN6cJm9idSwsUHbEOfB96aQL4dfNEOarzfD9KtDi1vADzkrmVRc2tz2qNw==
   dependencies:
+    tslib "^2.0.0"
+
+"@angular/youtube-player@10.2.1":
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/youtube-player/-/youtube-player-10.2.1.tgz#1cd7b3d005f7e2abde9df41dfb9499e7f651c3f2"
+  integrity sha512-JuH2UUavWJOnXiIJngfg9P578ZYIxi1wfs8lwtPTxNVK/ZPSMAuzTDMqjij2TB/jE83fzb5tXkxNo6bE262ZfQ==
+  dependencies:
+    "@types/youtube" "^0.0.38"
     tslib "^2.0.0"
 
 "@babel/code-frame@7.8.3":
@@ -2923,6 +2947,11 @@
   integrity sha512-Dk/IDOPtOgubt/IaevIUbTgV7doaKkoorvOyYM2CMwuDyP89bekI7H4xLIwunNYiK9jhCkmc6pUrJk3cj2AB9w==
   dependencies:
     "@types/yargs-parser" "*"
+
+"@types/youtube@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@types/youtube/-/youtube-0.0.38.tgz#04aa5efa61f4d52e9cf682575a9dfed58f31e8c1"
+  integrity sha512-rS0nLlnnZIvOfBNT4957rkKRMHjHxutoVhSEzowocYgNiTMVBmN+Hbkf/L3TeGMMtts9uKZ9gw7O2JLHREVnIw==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
@@ -12169,7 +12198,7 @@ parse5@2.2.3, parse5@^2.1.5:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-2.2.3.tgz#0c4fc41c1000c5e6b93d48b03f8083837834e9f6"
   integrity sha1-DE/EHBAAxea5PUiwP4CDg3g06fY=
 
-parse5@5.1.1:
+parse5@5.1.1, parse5@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.1.tgz#f68e4e5ba1852ac2cadc00f4555fff6c2abb6178"
   integrity sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==
