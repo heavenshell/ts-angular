@@ -1,5 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
@@ -7,13 +8,12 @@ import { DefaultService } from 'src/apis/spacex';
 import { LayoutModule } from 'src/app/components/templates/layout/layout.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 
-import { LaunchListComponent } from './launch-list.component';
-import { LaunchDatagridDetailComponent } from '../../../organisms/launches/launch-datagrid-detail/launch-datagrid-detail.component';
+import { LaunchDetailComponent } from './launch-detail.component';
 import { LaunchDetailComponent as LaunchOrganismsDetailComponent } from '../../../organisms/launches/launch-detail/launch-detail.component';
 
-describe('LaunchListComponent', () => {
-  let component: LaunchListComponent;
-  let fixture: ComponentFixture<LaunchListComponent>;
+describe('LaunchDetailComponent', () => {
+  let component: LaunchDetailComponent;
+  let fixture: ComponentFixture<LaunchDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -24,17 +24,23 @@ describe('LaunchListComponent', () => {
         SharedModule,
         LayoutModule,
       ],
-      declarations: [
-        LaunchListComponent,
-        LaunchOrganismsDetailComponent,
-        LaunchDatagridDetailComponent,
+      declarations: [LaunchDetailComponent, LaunchOrganismsDetailComponent],
+      providers: [
+        DefaultService,
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              paramMap: convertToParamMap({ id: 94 }),
+            },
+          },
+        },
       ],
-      providers: [DefaultService],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LaunchListComponent);
+    fixture = TestBed.createComponent(LaunchDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

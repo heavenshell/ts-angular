@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { ClarityModule } from '@clr/angular';
 
 import { HeaderComponent } from './header.component';
@@ -10,7 +11,7 @@ describe('HeaderComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [ClarityModule],
+        imports: [RouterTestingModule, ClarityModule],
         declarations: [HeaderComponent],
       }).compileComponents();
     })
@@ -28,6 +29,6 @@ describe('HeaderComponent', () => {
 
   it('should render', () => {
     const element: HTMLElement = fixture.debugElement.nativeElement;
-    expect(element.querySelector('header a').textContent).toBe('SpaceX');
+    expect(element.querySelector('header a').textContent).toBe('My SpaceX');
   });
 });
