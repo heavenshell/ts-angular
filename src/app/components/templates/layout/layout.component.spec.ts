@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { ClarityModule } from '@clr/angular';
 
 import { LayoutComponent } from './layout.component';
@@ -11,7 +12,7 @@ describe('LayoutComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [ClarityModule],
+        imports: [RouterTestingModule, ClarityModule],
         declarations: [...declarations, LayoutComponent],
       }).compileComponents();
     })

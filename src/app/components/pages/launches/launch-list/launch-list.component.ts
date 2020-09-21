@@ -1,19 +1,8 @@
 import { Location } from '@angular/common';
 import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  ClrDatagridSortOrder,
-  ClrDatagridStateInterface,
-  ClrLoadingState,
-} from '@clr/angular';
-import {
-  debounceTime,
-  distinctUntilChanged,
-  takeUntil,
-  tap,
-} from 'rxjs/operators';
+import { ClrDatagridSortOrder, ClrDatagridStateInterface } from '@clr/angular';
 
 import { DefaultService, Launch } from 'src/apis/spacex';
 import { convertDatagrState } from 'src/app/shared/clr-datagrid';

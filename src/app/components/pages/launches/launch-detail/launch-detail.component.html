@@ -1,0 +1,28 @@
+<app-layout>
+  <clr-spinner clrMedium *ngIf="loading">Loading data</clr-spinner>
+  <div *ngIf="item" style="padding: 0.5rem 1rem 0; background: #fff;">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="1.5rem">
+        <div>
+          <small>mission id</small>
+          <div>
+            {{ item.mission_id }}
+          </div>
+        </div>
+        <div>
+          <small>mission name</small>
+          <div>
+            {{ item.mission_name }}
+          </div>
+        </div>
+        <div>
+          <small>rocket name</small>
+          <div>
+            {{ item.rocket.rocket_name }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-organisms-launch-detail [item]="item"></app-organisms-launch-detail>
+  </div>
+</app-layout>
