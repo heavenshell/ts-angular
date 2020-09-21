@@ -3,7 +3,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { LaunchListComponent } from './launch-list/launch-list.component';
 import { LaunchesRoutingModule } from './launches-routing.module';
-import { LaunchDatagridDetailComponent } from '../../organisms/launces/launch-datagrid-detail/launch-datagrid-detail.component';
+import { LaunchDatagridDetailComponent } from '../../organisms/launches/launch-datagrid-detail/launch-datagrid-detail.component';
 import { LayoutModule } from '../../templates/layout/layout.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 

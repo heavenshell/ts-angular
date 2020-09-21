@@ -1,16 +1,16 @@
 <app-layout>
   <clr-datagrid (clrDgRefresh)="refresh($event)" [clrDgLoading]="loading">
     <clr-dg-column>
-      mission_name
+      mission name
     </clr-dg-column>
     <clr-dg-column>
-      rocket_name
+      rocket name
     </clr-dg-column>
-    <clr-dg-column 
+    <clr-dg-column
       clrDgSortBy="launch_date_local"
       [(clrDgSortOrder)]="datetimeDescSort"
     >
-      launch_date_local
+      launch date local
     </clr-dg-column>
 
     <clr-dg-row *ngFor="let item of items; let i = index">
@@ -41,7 +41,5 @@
           {{ pagination.firstItem + 1 }} - {{ pagination.lastItem + 1 }} of {{ pagination.totalItems }}
       </clr-dg-pagination>
     </clr-dg-footer>
-
-
   </clr-datagrid>
 </app-layout>
