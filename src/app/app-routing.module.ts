@@ -14,6 +14,13 @@ const routes: Routes = [
         (mod) => mod.LaunchesModule
       ),
   },
+  {
+    path: 'timelines',
+    loadChildren: () =>
+      import('./components/pages/timelines/timelines.module').then(
+        (mod) => mod.TimelinesModule
+      ),
+  },
 ];
 
 @NgModule({

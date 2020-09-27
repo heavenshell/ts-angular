@@ -1,0 +1,12 @@
+<ul class="nav" role="tablist">
+  <li role="presentation" class="nav-item" *ngFor="let link of links; let i = index">
+    <button
+      [routerLink]="[link.path]"
+      routerLinkActive="active"
+      class="btn btn-link nav-link"
+      type="button"
+    >
+      {{ link.name }}
+    </button>
+  </li>
+</ul>

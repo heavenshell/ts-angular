@@ -6,6 +6,9 @@
     <clr-dg-column>
       rocket name
     </clr-dg-column>
+    <clr-dg-column>
+      launch result
+    </clr-dg-column>
     <clr-dg-column
       clrDgSortBy="launch_date_local"
       [(clrDgSortOrder)]="datetimeDescSort"
@@ -21,6 +24,17 @@
       </clr-dg-cell>
       <clr-dg-cell>
         {{ item.rocket.rocket_name }}
+      </clr-dg-cell>
+      <clr-dg-cell>
+        <ng-container [ngSwitch]="item.launch_success">
+          <ng-container *ngSwitchCase="true">
+            <span class="label label-success">success</span>
+          </ng-container>
+          <ng-container *ngSwitchCase="false">
+            <span class="label label-danger">failure</span>
+          </ng-container>
+          <ng-container *ngSwitchDefault>--</ng-container>
+        </ng-container>
       </clr-dg-cell>
       <clr-dg-cell>
         {{ item.launch_date_local }}

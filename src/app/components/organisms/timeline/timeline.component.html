@@ -1,0 +1,67 @@
+<div class="card">
+  <div class="card-block">
+    <div class="card-text">
+      <clr-spinner clrMedium *ngIf="loading">Loading data</clr-spinner>
+      <ul class="clr-timeline clr-timeline-vertical">
+        <li class="clr-timeline-step" *ngFor="let item of items; let i = index">
+          <div class="clr-timeline-step-header" style="min-width:9rem">
+            {{ item.launch_date_local }}
+          </div>
+          <ng-container [ngSwitch]="item.upcoming">
+            <ng-container *ngSwitchCase="true">
+              <clr-icon shape="circle" aria-label="Not started"></clr-icon>
+            </ng-container>
+            <ng-container *ngSwitchCase="false">
+              <ng-container [ngSwitch]="item.launch_success">
+                <ng-container *ngSwitchCase="true">
+                  <clr-icon shape="success-standard" aria-label="Completed"></clr-icon>
+                </ng-container>
+                <ng-container *ngSwitchCase="false">
+                  <clr-icon shape="error-standard" aria-label="Error"></clr-icon>
+                </ng-container>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+          <div class="clr-timeline-step-body">
+            <span class="clr-timeline-step-title">
+              <a [routerLink]="['/launches/', item.id]">{{ item.mission_name }}</a>
+            </span>
+            <div class="clr-timeline-step-description">
+              <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="1.5rem">
+                  <div>
+                    <small>id</small>
+                    <div>
+                      {{ item.id }}
+                    </div>
+                  </div>
+                  <div>
+                    <small>rocket name</small>
+                    <div>
+                      {{ item.rocket.rocket_name }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 0.5rem;">
+                {{ item.details }}
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="clr-row clr-justify-content-center"
+        style="margin-top: 0.5rem;"
+        *ngIf="items.length > 0"
+      >
+        <div class="clr-col-1">
+          <a (click)="onNewLinkClick()">new</a>
+        </div>
+        <div class="clr-col-1">
+          <a (click)="onOldLinkClick()">old</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

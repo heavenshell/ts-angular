@@ -1,0 +1,15 @@
+<app-layout>
+  <app-molecules-tabs
+    [links]="[
+      { name: 'all', path: '/timelines/all' },
+      { name: 'upcomings', path: '/timelines/upcomings' },
+      { name: 'pasts', path: '/timelines/pasts' }
+    ]">
+  </app-molecules-tabs>
+  <app-organisms-timeline
+    [items]="items"
+    [loading]="loading"
+    (handleOldLinkClick)="onOldLinkClick()"
+    (handleNewLinkClick)="onNewLinkClick()"
+  ></app-organisms-timeline>
+</app-layout>
