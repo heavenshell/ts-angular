@@ -6,10 +6,7 @@ import { ClrDatagridSortOrder, ClrDatagridStateInterface } from '@clr/angular';
 
 import { DefaultService, Launch } from 'src/apis/spacex';
 import { convertDatagrState } from 'src/app/shared/clr-datagrid';
-
-type QueryParams = {
-  [param: string]: string | ReadonlyArray<string>;
-};
+import { buildQueryString } from 'src/app/shared/utils';
 
 @Component({
   selector: 'app-launch-list',
@@ -46,22 +43,6 @@ export class LaunchListComponent implements OnInit {
     }
   }
 
-  buildQueryString(page, size, order) {
-    const queryParams = {
-      page,
-      size,
-      order,
-    };
-
-    const urlTree = this.router.createUrlTree([], {
-      queryParams,
-      queryParamsHandling: 'merge',
-    });
-
-    const httpParams = new HttpParams({ fromObject: urlTree.queryParams });
-    return httpParams.toString();
-  }
-
   refresh(state: ClrDatagridStateInterface) {
     const { page, order, sortby } = convertDatagrState(state);
     this.fetchData(page.current, page.size, order, 'launch_date_local');
@@ -71,11 +52,12 @@ export class LaunchListComponent implements OnInit {
     this.loading = true;
     const limit = pageSize;
     const offset = (page - 1) * pageSize;
-    this.service.launchesQuery(undefined, limit, offset, order, sort).subscribe(
+    const params = {};
+    this.service.launchesQuery(params, limit, offset, order, sort).subscribe(
       (res) => {
         this.loading = false;
         this.items = res;
-        const query = this.buildQueryString(page, pageSize, order);
+        const query = buildQueryString(this.router, { page, pageSize, order });
         this.location.replaceState('/launches', query);
       },
       () => {

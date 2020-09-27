@@ -7,8 +7,24 @@
           <input id="tabexample2" type="checkbox" />
           <label for="tabexample2">Categories</label>
           <ul class="nav-list">
-            <li><a class="nav-link" (click)="onClick('/launches')">launches</a></li>
-            <li><a class="nav-link">Link 2</a></li>
+            <li>
+              <a
+                class="nav-link"
+                [class.active]="getActive('/launches')"
+                (click)="onClick('/launches')"
+              >
+                launches
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-link"
+                [class.active]="getActive('/timelines')"
+                (click)="onClick('/timelines')"
+              >
+                timelines
+              </a>
+            </li>
             <li><a class="nav-link">Link 3</a></li>
             <li><a class="nav-link">Link 4</a></li>
             <li><a class="nav-link">Link 5</a></li>

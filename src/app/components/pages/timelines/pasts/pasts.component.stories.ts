@@ -1,25 +1,26 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { YouTubePlayerModule } from '@angular/youtube-player';
 import { ClarityModule } from '@clr/angular';
+import { action } from '@storybook/addon-actions';
 import { moduleMetadata } from '@storybook/angular';
 
-import { declarations, imports } from '../../../../../stories/setup';
+import { declarations, imports } from 'src/stories/setup';
+import { PastsComponent } from './pasts.component';
+import { TabsComponent } from '../../../molecules/tabs/tabs.component';
 import { declarations as layoutDeclarations } from '../../../__fixtures__/layout';
-import { LaunchListComponent } from './launch-list.component';
-import { LaunchDatagridDetailComponent } from './../../../organisms/launches/launch-datagrid-detail/launch-datagrid-detail.component';
-import { LaunchDetailComponent } from './../../../organisms/launches/launch-detail/launch-detail.component';
+import { TimelineComponent } from '../../../organisms/timeline/timeline.component';
 
 import { launches } from '../../../__fixtures__/launches';
 
 const story = {
-  title: 'pages/launch-list',
+  title: 'pages/timelines/pasts',
   decorators: [
     moduleMetadata({
-      imports: [...imports, BrowserAnimationsModule, YouTubePlayerModule],
+      imports: [...imports, BrowserAnimationsModule],
       declarations: [
         ...declarations,
-        LaunchDetailComponent,
-        LaunchDatagridDetailComponent,
+        TabsComponent,
+        TimelineComponent,
+        PastsComponent,
         layoutDeclarations,
       ],
       providers: [],
@@ -28,22 +29,24 @@ const story = {
 };
 
 export const component = () => ({
-  component: LaunchListComponent,
+  component: PastsComponent,
   props: {
     items: launches,
     loading: false,
-    refresh: () => {},
+    fetchData: () => {},
+    onOldLinkClick: () => action('onOldLinkClick')('click'),
+    onNewLinkClick: () => action('onNewLinkClick')('click'),
   },
 });
 
 component.storyName = 'default';
 
 export const loading = () => ({
-  component: LaunchListComponent,
+  component: PastsComponent,
   props: {
     items: [],
     loading: true,
-    refresh: () => {},
+    fetchData: () => {},
   },
 });
 loading.storyName = 'loading';

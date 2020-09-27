@@ -11,7 +11,16 @@ export class LayoutComponent implements OnInit {
 
   ngOnInit() {}
 
-  onClick(link: string) {
-    this.router.navigateByUrl(link);
+  onClick(path: string) {
+    this.router
+      .navigateByUrl('/', { skipLocationChange: true })
+      .then(() => this.router.navigate([path]));
+  }
+
+  getActive(path: string) {
+    if (this.router.url.includes(path)) {
+      return 'active';
+    }
+    return '';
   }
 }
