@@ -1,14 +1,16 @@
 # ts-angular
 
 [![Build Status](https://github.com/heavenshell/ts-angular/workflows/build/badge.svg)](https://github.com/heavenshell/ts-angular/actions)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 My angular suburi(practice).
 
-| Library        | Description           |
-|:---------------|:----------------------|
-| Angular        | Framework             |
-| Jest           | Testing framework     |
-| TestCafe       | E2E Testing framework |
+| Library  | Description           |
+| :------- | :-------------------- |
+| Angular  | Framework             |
+| Jest     | Testing framework     |
+| TestCafe | E2E Testing framework |
 
 ## TODO
 
@@ -18,6 +20,12 @@ My angular suburi(practice).
 - [x] Prettier
 - [x] Markdownlint
 - [x] TestCafe
+
+## Generate api client
+
+```console
+yarn codegen
+```
 
 ## Development server
 
