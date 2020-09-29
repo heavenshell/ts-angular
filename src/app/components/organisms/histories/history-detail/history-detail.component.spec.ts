@@ -2,22 +2,23 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
-import { LaunchDatagridDetailComponent } from './launch-datagrid-detail.component';
+import { HistoryDetailComponent } from '../../../pages/histories/history-detail/history-detail.component';
+import { HistoryDetailComponent as HistoryOrganismsDetailComponent } from './history-detail.component';
 
-describe('LaunchDatagridDetailComponent', () => {
-  let component: LaunchDatagridDetailComponent;
-  let fixture: ComponentFixture<LaunchDatagridDetailComponent>;
+describe('HistoryDetailComponent', () => {
+  let component: HistoryOrganismsDetailComponent;
+  let fixture: ComponentFixture<HistoryOrganismsDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      declarations: [HistoryDetailComponent, HistoryOrganismsDetailComponent],
       imports: [YouTubePlayerModule],
-      declarations: [LaunchDatagridDetailComponent],
       schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LaunchDatagridDetailComponent);
+    fixture = TestBed.createComponent(HistoryOrganismsDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

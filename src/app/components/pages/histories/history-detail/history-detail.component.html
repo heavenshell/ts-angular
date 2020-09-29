@@ -1,0 +1,28 @@
+<app-layout>
+  <clr-spinner clrMedium *ngIf="loading">Loading data</clr-spinner>
+  <div *ngIf="item" style="padding: 0.5rem 1rem 0; background: #fff;">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="1.5rem">
+        <div>
+          <small>history id</small>
+          <div>
+            {{ item.id }}
+          </div>
+        </div>
+        <div>
+          <small>title</small>
+          <div>
+            {{ item.title }}
+          </div>
+        </div>
+        <div>
+          <small>event date</small>
+          <div>
+            {{ item.event_date_utc }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-organisms-history-detail [item]="item"></app-organisms-history-detail>
+  </div>
+</app-layout>

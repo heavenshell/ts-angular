@@ -21,6 +21,13 @@ const routes: Routes = [
         (mod) => mod.TimelinesModule
       ),
   },
+  {
+    path: 'histories',
+    loadChildren: () =>
+      import('./components/pages/histories/histories.module').then(
+        (mod) => mod.HistoriesModule
+      ),
+  },
 ];
 
 @NgModule({
