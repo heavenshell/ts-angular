@@ -1,0 +1,84 @@
+<ng-container *ngIf="item">
+  <div fxLayout="row" style="width: 100%; padding-bottom: 1rem;">
+    <div fxFlex>
+      <clr-tabs>
+        <clr-tab>
+          <button clrTabLink id="link1">
+            detail
+          </button>
+          <clr-tab-content id="content1" *clrIfActive>
+            <div class="card" *ngIf="item.details">
+              <div class="card-header">
+                detail
+              </div>
+              <div class="card-block">
+                <p class="card-text" *ngIf="item.details">
+                  {{ item.details }}
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                flight
+              </div>
+              <div class="card-block">
+                <div class="card-text" *ngIf="item.flight">
+                  <table class="table table-vertical table-compact table-noborder margin-none">
+                    <tbody>
+                      <tr>
+                        <th>flight id</th>
+                        <td>{{ item.flight.id }}</td>
+                      </tr>
+                      <tr>
+                        <th>mission name</th>
+                        <td>
+                          <a routerLink="/launches/{{ item.flight.id }}">
+                            {{ item.flight.mission_name }}
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>launch date</th>
+                        <td>
+                          {{ item.flight.launch_date_local }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </clr-tab-content>
+        </clr-tab>
+        <clr-tab>
+          <button clrTabLink>
+            links
+          </button>
+          <clr-tab-content *clrIfActive>
+            <div class="card">
+              <div class="card-block">
+                <ul class="list-unstyled">
+                  <li *ngIf="item.links.article">
+                    <a href="{{ item.links.article }}" target="_blank" rel="noopener noreferrer">
+                      <clr-icon shape="pop-out"></clr-icon> article
+                    </a>
+                  </li>
+                  <li *ngIf="item.links.wikipedia">
+                    <a href="{{ item.links.wikipedia }}" target="_blank" rel="noopener noreferrer">
+                      <clr-icon shape="pop-out"></clr-icon> wikipedia
+                    </a>
+                  </li>
+                  <li *ngIf="item.links.reddit">
+                    <a href="{{ item.links.reddit }}" target="_blank" rel="noopener noreferrer">
+                      <clr-icon shape="pop-out"></clr-icon> reddit
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </clr-tab-content>
+        </clr-tab>
+      </clr-tabs>
+    </div>
+  </div>
+</ng-container>

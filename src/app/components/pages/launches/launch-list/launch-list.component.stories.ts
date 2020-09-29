@@ -1,6 +1,5 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { ClarityModule } from '@clr/angular';
 import { moduleMetadata } from '@storybook/angular';
 
 import { declarations, imports } from '../../../../../stories/setup';
@@ -8,7 +7,6 @@ import { declarations as layoutDeclarations } from '../../../__fixtures__/layout
 import { LaunchListComponent } from './launch-list.component';
 import { LaunchDatagridDetailComponent } from './../../../organisms/launches/launch-datagrid-detail/launch-datagrid-detail.component';
 import { LaunchDetailComponent } from './../../../organisms/launches/launch-detail/launch-detail.component';
-
 import { launches } from '../../../__fixtures__/launches';
 
 const story = {

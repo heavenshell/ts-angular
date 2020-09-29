@@ -2,28 +2,26 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { YouTubePlayerModule } from '@angular/youtube-player';
 
 import { DefaultService } from 'src/apis/spacex';
-import { LayoutModule } from 'src/app/components/templates/layout/layout.module';
+import { HistoryDetailComponent } from './history-detail.component';
+import { HistoryDetailComponent as HistoryOrganismsDetailComponent } from '../../../organisms/histories/history-detail/history-detail.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { LaunchDetailComponent } from './launch-detail.component';
-import { LaunchDetailComponent as LaunchOrganismsDetailComponent } from '../../../organisms/launches/launch-detail/launch-detail.component';
+import { LayoutModule } from '../../../templates/layout/layout.module';
 
-describe('LaunchDetailComponent', () => {
-  let component: LaunchDetailComponent;
-  let fixture: ComponentFixture<LaunchDetailComponent>;
+describe('HistoryDetailComponent', () => {
+  let component: HistoryDetailComponent;
+  let fixture: ComponentFixture<HistoryDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
         HttpClientTestingModule,
-        YouTubePlayerModule,
         SharedModule,
         LayoutModule,
       ],
-      declarations: [LaunchDetailComponent, LaunchOrganismsDetailComponent],
+      declarations: [HistoryDetailComponent, HistoryOrganismsDetailComponent],
       providers: [
         DefaultService,
         {
@@ -39,7 +37,7 @@ describe('LaunchDetailComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LaunchDetailComponent);
+    fixture = TestBed.createComponent(HistoryDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

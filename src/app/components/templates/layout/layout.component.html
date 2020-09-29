@@ -25,7 +25,15 @@
                 timelines
               </a>
             </li>
-            <li><a class="nav-link">Link 3</a></li>
+            <li>
+              <a
+                class="nav-link"
+                [class.active]="getActive('/histories')"
+                (click)="onClick('/histories')"
+              >
+                histories
+              </a>
+            </li>
             <li><a class="nav-link">Link 4</a></li>
             <li><a class="nav-link">Link 5</a></li>
             <li><a class="nav-link">Link 6</a></li>

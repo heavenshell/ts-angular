@@ -1,0 +1,41 @@
+<app-layout>
+  <clr-datagrid (clrDgRefresh)="refresh($event)" [clrDgLoading]="loading">
+    <clr-dg-column>
+      title
+    </clr-dg-column>
+    <clr-dg-column
+      clrDgSortBy="event_date_unix"
+      [(clrDgSortOrder)]="datetimeDescSort"
+    >
+      event date utc
+    </clr-dg-column>
+
+    <clr-dg-row *ngFor="let item of items; let i = index">
+      <clr-dg-cell>
+        <a routerLink="/histories/{{ item.id }}">
+          {{ item.title }}
+        </a>
+      </clr-dg-cell>
+      <clr-dg-cell>
+        {{ item.event_date_utc }}
+      </clr-dg-cell>
+      <clr-dg-row-detail *clrIfExpanded>
+        <app-organisms-history-datagrid-detail [item]="item"></app-organisms-history-datagrid-detail>
+      </clr-dg-row-detail>
+    </clr-dg-row>
+
+    <clr-dg-footer>
+      <clr-dg-pagination
+        #pagination
+        [clrDgPageSize]="size"
+        [(clrDgPage)]="page"
+        [clrDgTotalItems]="total"
+        >
+          <clr-dg-page-size [clrPageSizeOptions]="[10,20,50,100]">
+            Rows per page
+          </clr-dg-page-size>
+          {{ pagination.firstItem + 1 }} - {{ pagination.lastItem + 1 }} of {{ pagination.totalItems }}
+      </clr-dg-pagination>
+    </clr-dg-footer>
+  </clr-datagrid>
+</app-layout>

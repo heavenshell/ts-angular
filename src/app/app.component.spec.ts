@@ -18,9 +18,9 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ts-angular'`, () => {
+  it(`should have as title 'My Space-X'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('ts-angular');
+    expect(app.title).toEqual('My Space-X');
   });
 });
