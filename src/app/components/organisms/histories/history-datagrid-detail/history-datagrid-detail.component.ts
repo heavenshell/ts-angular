@@ -8,6 +8,7 @@ import { History } from 'src/apis/spacex';
   styleUrls: ['./history-datagrid-detail.component.scss'],
 })
 export class HistoryDatagridDetailComponent implements OnInit {
+  loading = false;
   @Input() item: History = null;
 
   constructor() {}
