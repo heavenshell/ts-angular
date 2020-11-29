@@ -1974,22 +1974,22 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@clr/angular@4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-4.0.6.tgz#4bf169841d578e5812ea9a698d5f14ad28e8a6fa"
-  integrity sha512-Y9kITlfV2pRDm+cZCTTj/A4FP273qXgUZ2G11aMPdyRW8TYJdNID7Wvb3Qdsxxsfc8WouhMgX8XQM2cewJeFhQ==
+"@clr/angular@4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@clr/angular/-/angular-4.0.7.tgz#21ef7385a6a4faf552c74156f949c665dc2248b0"
+  integrity sha512-PxJJfo2xSTaWXu+rN8qQjJw4r77kXC7GyUA1u80j0sNRfkQEXB1yGwT+HXxULaVueviYxuvu/hkrAqpLaN4GNw==
   dependencies:
     tslib "^2.0.0"
 
-"@clr/icons@4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-4.0.6.tgz#081a3944a80ce4ac72b36c2c04f847f581220bac"
-  integrity sha512-0lWDIfqg5B8Gr0NKKv+QSZZ80AiAFHoXERg0XYwS7JQEti6Rl9d8+Y4mdEIVvq30aFdRtp5kB23BNU2XXMneHw==
+"@clr/icons@4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@clr/icons/-/icons-4.0.7.tgz#03690adb5faf9dfe034b69b126b6d3295e95ef29"
+  integrity sha512-FCrPk3OWSSgCtYcGKpNAlseimr9dZjJzJ9Bq28y/we3G4Tz05ckodBSpLx9OLr8K3veA6hm8pYGljahqqjXd1Q==
 
-"@clr/ui@4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-4.0.6.tgz#bb5497e4f9482537aed705edbf7fcb26df9beac9"
-  integrity sha512-M78sNbG+OOUwQ5wQib1Ry+/ZAmB1rfqVZ46amNt0FvLlxiKdZVdJJxJ+eRrBsR4pvWHwAV8RiTXwwJXxcuuG7A==
+"@clr/ui@4.0.7":
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/@clr/ui/-/ui-4.0.7.tgz#695002bea47badc949c42f77790f9e323a81ae50"
+  integrity sha512-YbwtuMr//Ep3pqnJAVuVRX7frP8aIVyLXWO+U+plSCCuLcvxwBXeafBG80jkU7+asCjEd3hdvfzJy/TQuLcE8g==
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
