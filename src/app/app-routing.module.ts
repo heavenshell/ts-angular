@@ -28,6 +28,13 @@ const routes: Routes = [
         (mod) => mod.HistoriesModule
       ),
   },
+  {
+    path: 'launchpads',
+    loadChildren: () =>
+      import('./components/pages/launchpads/launchpads.module').then(
+        (mod) => mod.LaunchpadsModule
+      ),
+  },
 ];
 
 @NgModule({
