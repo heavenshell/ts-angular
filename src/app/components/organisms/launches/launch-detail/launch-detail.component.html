@@ -37,7 +37,9 @@
                           </tr>
                           <tr>
                             <th>mission patch</th>
-                            <td><img src="{{ item.links.mission_patch_small}}" /></td>
+                            <td class="card-img">
+                              <img src="{{ item.links.mission_patch_small}}" >
+                            </td>
                           </tr>
                         </tbody>
                       </table>
@@ -109,7 +111,7 @@
           </button>
           <clr-tab-content *clrIfActive>
             <div class="card">
-              <div class="card-header">
+              <div class="card-header" *ngIf="item.rocket">
                 rocket
               </div>
               <div class="card-block">
@@ -138,7 +140,7 @@
                 cores
               </div>
               <div class="card-block">
-                <div class="card-text">
+                <div class="card-text" *ngIf="item.rocket.first_stage.cores[0].core">
                   <table class="table table-vertical table-compact table-noborder margin-none">
                     <tbody>
                       <tr>
