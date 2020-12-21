@@ -34,9 +34,15 @@
                 histories
               </a>
             </li>
-            <li><a class="nav-link">Link 4</a></li>
-            <li><a class="nav-link">Link 5</a></li>
-            <li><a class="nav-link">Link 6</a></li>
+            <li>
+              <a
+                class="nav-link"
+                [class.active]="getActive('/launchpads')"
+                (click)="onClick('/launchpads')"
+              >
+                launchpads
+              </a>
+            </li>
           </ul>
         </section>
       </section>

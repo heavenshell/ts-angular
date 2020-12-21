@@ -4,8 +4,9 @@
       <clr-spinner clrMedium *ngIf="loading">Loading data</clr-spinner>
       <ul class="clr-timeline clr-timeline-vertical">
         <li class="clr-timeline-step" *ngFor="let item of items; let i = index">
-          <div class="clr-timeline-step-header" style="min-width:9rem">
+          <div class="clr-timeline-step-header" style="min-width:10rem">
             {{ item.launch_date_local }}
+            {{ item.launch_success }}
           </div>
           <ng-container [ngSwitch]="item.upcoming">
             <ng-container *ngSwitchCase="true">
@@ -18,6 +19,9 @@
                 </ng-container>
                 <ng-container *ngSwitchCase="false">
                   <clr-icon shape="error-standard" aria-label="Error"></clr-icon>
+                </ng-container>
+                <ng-container *ngSwitchDefault>
+                  <clr-icon shape="circle" aria-label="Not started"></clr-icon>
                 </ng-container>
               </ng-container>
             </ng-container>
