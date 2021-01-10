@@ -12,13 +12,11 @@ export class FooterComponent implements OnInit {
   ngOnInit() {}
 
   onGitHubIconClick(e: MouseEvent) {
-    console.log(e);
     e.preventDefault();
     return location.assign('https://github.com/heavenshell/');
   }
 
   onTwitterIconClick(e: MouseEvent) {
-    console.log(e);
     e.preventDefault();
     return location.assign('https://twitter.com/heavenshell/');
   }
