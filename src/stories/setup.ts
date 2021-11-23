@@ -20,7 +20,7 @@ import { action } from '@storybook/addon-actions';
 class RouterLinkStubComponent {}
 
 @Directive({
-  selector: '[routerLink]', // tslint:disable-line:directive-selector
+  selector: '[routerLink]', // eslint-disable-line @angular-eslint/directive-selector
 })
 class RouterLinkStubDirective {
   @Input('routerLink') linkParams: string;

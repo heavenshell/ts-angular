@@ -9,6 +9,7 @@ export class FooterComponent implements OnInit {
   year: number = new Date().getFullYear();
   constructor() {}
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit() {}
 
   onGitHubIconClick(e: MouseEvent) {
