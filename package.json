@@ -94,7 +94,7 @@
   "jest": {
     "preset": "jest-preset-angular",
     "setupFilesAfterEnv": [
-      "<rootDir>/jest.setup.ts"
+      "<rootDir>/src/setup-jest.ts"
     ],
     "testEnvironment": "jsdom",
     "testMatch": [

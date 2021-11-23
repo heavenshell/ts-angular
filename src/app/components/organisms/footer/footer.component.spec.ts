@@ -1,5 +1,5 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { ClarityModule } from '@clr/angular';
 
 import { GithubComponent } from '../../atoms/github/github.component';
 import { TwitterComponent } from '../../atoms/twitter/twitter.component';
@@ -12,8 +12,9 @@ describe('FooterComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [ClarityModule],
+        imports: [],
         declarations: [GithubComponent, TwitterComponent, FooterComponent],
+        schemas: [NO_ERRORS_SCHEMA],
       }).compileComponents();
     })
   );
