@@ -1,6 +1,6 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ClarityModule } from '@clr/angular';
 
 import { TabsComponent } from './tabs.component';
 
@@ -11,8 +11,9 @@ describe('TabsComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [RouterTestingModule, ClarityModule],
+        imports: [RouterTestingModule],
         declarations: [TabsComponent],
+        schemas: [NO_ERRORS_SCHEMA],
       }).compileComponents();
     })
   );

@@ -10,5 +10,6 @@ export class TabsComponent implements OnInit {
   @Input() links: { name: string; path: string }[] = [];
   constructor(private router: Router) {}
 
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit() {}
 }

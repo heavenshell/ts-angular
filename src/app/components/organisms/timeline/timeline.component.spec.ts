@@ -1,11 +1,10 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { TimelineComponent } from './timeline.component';
 import { TabsComponent } from '../../molecules/tabs/tabs.component';
-import { LayoutModule } from '../../templates/layout/layout.module';
 import { AllComponent } from '../../pages/timelines/all/all.component';
-import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('TimelineComponent', () => {
   let component: TimelineComponent;
@@ -13,8 +12,9 @@ describe('TimelineComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule, SharedModule, LayoutModule],
+      imports: [RouterTestingModule],
       declarations: [TimelineComponent, TabsComponent, AllComponent],
+      schemas: [NO_ERRORS_SCHEMA],
     }).compileComponents();
   });
 
