@@ -34,7 +34,7 @@
     "@clr/icons": "12.0.8",
     "@clr/ui": "12.0.8",
     "@webcomponents/webcomponentsjs": "2.6.0",
-    "rxjs": "7.4.0",
+    "rxjs": "7.5.1",
     "tslib": "2.3.1",
     "zone.js": "0.11.4"
   },
